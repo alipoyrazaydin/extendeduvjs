@@ -59,7 +59,7 @@ module.exports = (options = {}) => {
                 }
                 function intervalStepper() {
                     var drift = Date.now() - expected;
-                    workFunc;
+                    workFunc();
                     expected += that.interval;
                     timeout = setTimeout(intervalStepper, Math.max(0, that.interval-drift));
                 }
