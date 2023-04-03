@@ -1,0 +1,30 @@
+{
+  "name": "extendeduvjs",
+  "version": "1.0.0",
+  "description": "ExtendedUVJS is a framework to extend the capabilities of any LibUV-based Javascript Interpreter (ex. Node.JS).",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alipoyrazaydin/extendeduvjs.git"
+  },
+  "keywords": [
+    "node.js",
+    "extend",
+    "extensions",
+    "framework",
+    "libuv",
+    "uvjs",
+    "libuvjs",
+    "deno",
+    "extendeduvjs"
+  ],
+  "author": "alipoyrazaydin",
+  "license": "UNLICENSE",
+  "bugs": {
+    "url": "https://github.com/alipoyrazaydin/extendeduvjs/issues"
+  },
+  "homepage": "https://github.com/alipoyrazaydin/extendeduvjs#readme"
+}
