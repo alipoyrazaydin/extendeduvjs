@@ -53,3 +53,25 @@ require("../classes/hey");
 // Absolute Path Require:
 requireAbsolute("core/classes/hey");
 ```
+5 - Dispose Objects
+```js
+// Load the framework before everything.
+require("extendeduvjs")();
+
+var myString = "Hello World!";
+var myObject = {"What": "How?"};
+
+myString.dispose();
+myObject.dispose();
+```
+6 - Dispose Objects (Procedural)
+```js
+// Load the framework before everything.
+require("extendeduvjs")();
+
+var myString = "Hello World!";
+var myObject = {"What": "How?"};
+
+unset(myString);
+unset(myObject);
+```
