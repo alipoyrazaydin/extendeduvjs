@@ -25,7 +25,7 @@ require("extendeduvjs")();
 var myObject = {"Hey": "Hello!"};
 var JSONOutput = JSON.stringify(myObject.with({"What": "How?"}));
 ```
-1 - Swallow (Methodified Try-Catch): 
+3 - Swallow (Methodified Try-Catch): 
 ```js
 // Load the framework before everything.
 require("extendeduvjs")();
@@ -39,7 +39,7 @@ return swallow(() => { return process.coreversion.NAME })
 return swallow(() => { return even for the most devious errors })
 // Return: null
 ```
-2 - requireAbsolute (Require by Absolute Path / Script Execution Path): 
+4 - requireAbsolute (Require by Absolute Path / Script Execution Path): 
 ```js
 // Load the framework before everything.
 require("extendeduvjs")();
