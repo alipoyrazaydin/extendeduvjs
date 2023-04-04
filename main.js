@@ -78,7 +78,7 @@ module.exports = (options = {}) => {
         // log (Better Log)
         (() => {
             const mark = (vk = 34) => {
-                if (process.verbose) return '\x1b[' + (process.color || 34) + 'm[' + (process.logTitle ? process.logTitle : process.title) + " \x1b[33m" + hztime() + '\x1b[' + (process.color || 34) + 'm]';
+                if (process.verbose) return '\x1b[' + (process.color || 34) + 'm[' + (process.logTitle ? process.logTitle : process.title) + " \x1b[33m" + process.hrtime().toString().substring(0,12) + '\x1b[' + (process.color || 34) + 'm]';
                 else return '\x1b[' + (process.color || 34) + 'm[' + (process.logTitle ? process.logTitle : process.title) + ']';
             }
             const more = function() { const h = this; return {
