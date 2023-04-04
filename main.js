@@ -104,7 +104,7 @@ module.exports = (options = {}) => {
             GLB.log = function(...args) { console.log(mark() + ' \x1b[37m', ...args, '\x1b[0m');return more.call({ident:(this.ident === undefined ? "" : this.ident)}); };
             GLB.verbose = function(...args) { if (process.verbose) console.log(mark() + ' \x1b[37m', ...args, '\x1b[0m'); return more.call({ident:(this.ident === undefined ? "" : this.ident)}); };
             GLB.error = function(...args) { console.error(mark() + ' \x1b[37m', ...args, '\x1b[0m'); return more.call({ident:(this.ident === undefined ? "" : this.ident)}); };
-            GLB.debug = (i) => {var spl = i.split("\n");if (spl.length > 1){var kStart = spl.shift();var kEnd = spl.pop();const vLog = verbose("\x1b[35m" + kStart);spl.forEach(kl => {vLog.verboseMore("\x1b[35m" + kl);});vLog.verboseEnd("\x1b[35m" + kEnd);} else {verbose("\x1b[35m" + i);}}
+            GLB.debug = (i) => {var spl = i.split("\n");if (spl.length > 1){var kStart = spl.shift();var kEnd = spl.pop();const vLog = verbose("\x1b[35m" + kStart);spl.forEach(kl => {vLog.verboseNext("\x1b[35m" + kl);});vLog.verboseEnd("\x1b[35m" + kEnd);} else {verbose("\x1b[35m" + i);}}
             GLB.errorCat = (i) => {
                 var spl = i.toString().split("\n");; 
                 if (spl.length > 1){
@@ -112,7 +112,7 @@ module.exports = (options = {}) => {
                     var kEnd = spl.pop();
                     const vLog = verbose("\x1b[31m" + kStart);
                     spl.forEach(kl => {
-                        vLog.verboseMore("\x1b[31m" + kl);
+                        vLog.verboseNext("\x1b[31m" + kl);
                     });
                     vLog.verboseEnd("\x1b[31m" + kEnd);
                 } else {verbose("\x1b[31m" + i);}
@@ -124,7 +124,7 @@ module.exports = (options = {}) => {
                     var kEnd = spl.pop();
                     const vLog = verbose("\x1b[35m" + kStart);
                     spl.forEach(kl => {
-                        vLog.verboseMore("\x1b[35m" + kl);
+                        vLog.verboseNext("\x1b[35m" + kl);
                     });
                     vLog.verboseEnd("\x1b[35m" + kEnd);
                 } else {verbose("\x1b[35m" + i);};
