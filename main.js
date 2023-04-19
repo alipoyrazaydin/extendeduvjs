@@ -35,7 +35,7 @@ module.exports = (options = {}) => {
         GLB.swallow = function(func) { try { return func.call(this); } catch { return undefined; } };
         GLB.swallowCatch = function(func) { try { return func.call(this); } catch (error) { return error; } };
 
-        GLB.isset = function(e) { return (e !== null || e !== undefined); };
+        GLB.isset = function(e) { return !(e == null || e == undefined); };
         GLB.unset = function(e) { delete e; }
 
         GLB.destroyGlobalsForceSafe = function() { delete self; delete window; delete process; delete global; delete globalThis; delete require; delete module; return; }
